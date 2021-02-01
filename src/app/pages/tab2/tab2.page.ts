@@ -29,12 +29,21 @@ export class Tab2Page implements OnInit {
     this.CargarNoticias(event.detail.value);
   }
 
-  CargarNoticias( categoria: string){
+  CargarNoticias( categoria: string, event?){
     this.noticiasService.getTopHeadLinesCategorias(categoria)
     .subscribe(res =>{
       console.log(res);
       this.noticias.push(...res.articles);
+
+      if (event){
+        event.target.complete();
+      }
     });
   }
 
+  loadData(event) {
+
+    this.CargarNoticias(this.segment.value,event);
+
+  }
 }

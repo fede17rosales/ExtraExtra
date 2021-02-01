@@ -15,6 +15,11 @@ const headers = new HttpHeaders({
 })
 export class NoticiasService {
 
+  HeadLinesPages = 0;
+
+  categoriaActual = '';
+  categoriaPage = 0;
+
   // importo el componente HttpClient de la common
   constructor(private http: HttpClient) { }
 
@@ -24,13 +29,19 @@ export class NoticiasService {
   }
 
     getTopHeadlines() {
+      this.HeadLinesPages ++;
       // tslint:disable-next-line: max-line-length
-      // return this.http.get<RespuestaTopHeadLines>(`https://newsapi.org/v2/top-headlines?country=ar&apiKey=9af975a277674f9789b24b46da5072e2`);
-     return this.ejecutarQuery<RespuestaTopHeadLines>(`/top-headlines?country=ar`);
+      return this.ejecutarQuery<RespuestaTopHeadLines>(`/top-headlines?country=ar&page=${ this.HeadLinesPages }`);
     } // creo la funcion para conseguir la info, <RespuestaTopHeadLines> -> es de tipo observable y la importo desde interface
 
     getTopHeadLinesCategorias( categoria: string) {
-    //  return this.http.get(`http://newsapi.org/v2/top-headlines?country=ar&category=business&apiKey=9af975a277674f9789b24b46da5072e2`);
-    return this.ejecutarQuery<RespuestaTopHeadLines>(`/top-headlines?country=ar&category=${ categoria }`);
+      if ( this.categoriaActual === categoria){
+        this.categoriaPage++;
+      }else {
+        this.categoriaPage = 1;
+        this.categoriaActual = categoria;
+      }
+
+      return this.ejecutarQuery<RespuestaTopHeadLines>(`/top-headlines?country=ar&category=${ categoria }&page=${ this.categoriaPage }`);
   }
 }
