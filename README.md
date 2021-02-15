@@ -1,19 +1,19 @@
 # EXTRA EXTRA
 
-_Extra Extra es un proyecto web dedicado a brindar las últimas noticias de Argentina y el mundo, con información actualizada las 24hs y en Español.
+_Extra Extra es un proyecto web dedicado a brindar las últimas noticias de Argentina y el mundo, con información actualizada las 24hs y en Español._
 
 ## Comenzando 🚀
 
-Para empezar, necesitamos descargar ó clonar este proyecto con el siguiente comando: 
+_Para empezar, necesitamos descargar ó clonar este proyecto con el siguiente comando:_ 
 ```
 git clone https://github.com/fede17rosales/ExtraExtra.git
 ```
 
-Lo ubicamos en el directorio donde vamos a realizar la ejecución del proyecto y listo podemos proceder con la instalción del framework.
+_Lo ubicamos en el directorio donde vamos a realizar la ejecución del proyecto y listo podemos proceder con la instalción del framework._
 
 ### Instalación 🔧
 
-_Necesario tener instalado Ionic para el correcto funcionamiento del proyecto, aquí un comando para su instalacion:
+_Necesario tener instalado Ionic para el correcto funcionamiento del proyecto, aquí un comando para su instalacion:_
 
 ```
 npm install -g @ionic/cli
@@ -22,18 +22,18 @@ npm install -g @ionic/cli
 
 ## Ejecutando el proyecto ⚙️
 
-_Para que este proyecto este funcionando, debemos posicionarnos en la carpeta del proyecto la cual es: 
+_Para que este proyecto este funcionando, debemos posicionarnos en la carpeta del proyecto la cual es:_ 
 
 ```
 extraextra\
 ```
- y ejecutar el siguiente comando:
+ _y ejecutar el siguiente comando:_
 
  ```
  ionic serve
  ```
 
- que nos ejecutara el proyecto direccionandonos a una pestaña del navegador, Y con esto ultimo damos por finalizado la ejecución del proyecto.
+ _que nos ejecutara el proyecto direccionandonos a una pestaña del navegador, Y con esto ultimo damos por finalizado la ejecución del proyecto._
 
 ## Construido con 🛠️
 
