@@ -1,5 +1,7 @@
 {
   "name": "extraextra",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
